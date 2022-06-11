@@ -3,6 +3,10 @@ const linkForm = document.getElementById('link-form');
 const errMsg = document.getElementById('err-msg');
 
 
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+const container = document.getElementById('global-container')
+
 // Validate a URL
 function validURL(str) {
     var pattern = new RegExp(
@@ -17,7 +21,25 @@ function validURL(str) {
     return !!pattern.test(str);
   }
 
+//Toggle Mobile Menu
+navToggle = () => {
+  btn.classList.toggle('open');
+  menu.classList.toggle('flex');
+  menu.classList.toggle('hidden');
+  
+  // if(btn.classList.contains('open')){
+  //   container.remove()
+  // },
+  // container.classList.toggle('opacity-50');
+  
+  // container.classList.toggle('opacity-100');
 
+  // menu.classList.add('opacity-100');
+  // container.classList.toggle('opacity-100')
+
+}
+
+//Submit form
 formSubmit = (e) => {
     e.preventDefault();
     console.log(input.value)
@@ -35,5 +57,6 @@ formSubmit = (e) => {
 }
 
 linkForm.addEventListener('submit', this.formSubmit);
+btn.addEventListener('click', this.navToggle)
 
 

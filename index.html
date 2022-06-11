@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Shortly</title>
   </head>
-  <body>
+  <body id="global-container">
     <!-- Nav container-->
     <nav class="relative container mx-auto m-6">
       <!-- Flex Container for All Items-->
@@ -26,7 +26,7 @@
         <!-- Flex Container for Logo/Menu-->
         <div class="flex items-center space-x-20">
           <!-- Logo -->
-          <img src="images/logo.svg" alt="logo">
+          <img class="m-4" src="images/logo.svg" alt="logo">
           <!-- Left Menu -->
           <div class="hidden space-x-8 font-bold lg:flex">
             <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Features</a>
@@ -39,9 +39,27 @@
           <div class="hover:text-veryDarkViolet">Login</div>
           <a href="#" class="px-8 py-8 font-bold text-white bg-cyan rounded-full hover:opacity-70">Sign Up</a>
         </div>
-        <!-- @todo hamburger menu-->
+        <!-- hamburger menu-->
+        <button
+          id="menu-btn"
+          class="block hamburger lg:hidden focus:outline-none m-4"
+          type="button"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
       </div>
-      <!-- @todo Mobile Menu-->
+      <!-- Mobile Menu-->
+      <div id="menu" class="absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100">
+        <div class="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm">
+          <a href="#" class="w-full text-center">Features</a>
+          <a href="#" class="w-full text-center">Pricing</a>
+          <a href="#" class="w-full text-center">Resources</a>
+          <a href="#" class="w-full pt-6 border-t border-gray-400 text-center">Login</a>
+          <a href="#" class="w-full py-3 rounded-full bg-cyan text-center">Sign Up</a>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
@@ -81,7 +99,7 @@
          <input 
          
          type="text" 
-         class=" border-red flex-1 p-3 border-2 rounded-lg placeholder-violet-600 focus:outline-none" 
+         class=" flex-1 p-3 border-2 rounded-lg placeholder-violet-600 focus:outline-none" 
          placeholder="Shorten a link here"
          id="link-input" >
          <button type="submit" class="px-10 py-3 text-white bg-cyan rounded-lg hover:bg-cyanLight hover:font-bold hover:uppercase focus:outline-none md:py-2">
@@ -207,6 +225,73 @@
         
       </div>
     </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-24 bg-darkViolet">
+      <div class="flex flex-col p-2 space-y-6">
+        <h5 class="mx-auto space-y-10 text-4xl font-bold text-center text-white">
+          Boost your links today
+        </h5>
+        <button class="px-10 py-5 mx-auto text-2xl font-bold text-white rounded-full bg-cyan hover:cyanLight md:text-base md:py-3 focus:outline none">
+          Get Started
+        </button>
+      </div>
+    </section>
+
+    <footer class="py-16 bg-veryDarkViolet">
+      <div class="container flex flex-col items-center justify-between mx-auto space-y-16 md:flex-row md:space-y-0 md:items-start">
+        <!-- Logo -->
+        <img src="images/logo.svg" alt="logo">
+
+        <!-- Menus Container -->
+        <div class="flex flex-col space-y-16 md:space-x-20 md:flex-row md:space-y-0">
+          <!-- Menu 1 -->
+          <div class="flex flex-col items-center w-full md:items-start">
+            <div class="mb-5 font-bold text-white capitalize">Features</div>
+            <div class="flex flex-col items-center space-y-3 md:items-start">
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">Link Shortening</a>
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">Branded links</a>
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">Analytics</a>
+            </div>
+          </div>
+          <!-- Menu 2 -->
+          <div class="flex flex-col items-center w-full md:items-start">
+            <div class="mb-5 font-bold text-white capitalize">Features</div>
+            <div class="flex flex-col items-center space-y-3 md:items-start">
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">blog</a>
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">developers</a>
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">support</a>
+            </div>
+          </div>
+          <!-- Menu 3 -->
+          <div class="flex flex-col items-center w-full md:items-start">
+            <div class="mb-5 font-bold text-white capitalize">Features</div>
+            <div class="flex flex-col items-center space-y-3 md:items-start">
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">company</a>
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">about</a>
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">our team</a>
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">careers</a>
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan">contact</a>
+            </div>
+          </div>
+        </div>
+        <!-- Social Container -->
+        <div class="flex space-x-6">
+          <a href="#">
+            <img src="images/icon-facebook.svg" alt="icon-facebook" class="ficon">
+          </a>
+          <a href="#">
+            <img src="images/icon-twitter.svg" alt="icon-twitter" class="ficon">
+          </a>
+          <a href="#">
+            <img src="images/icon-pinterest.svg" alt="icon-pinterest" class="ficon">
+          </a>
+          <a href="#">
+            <img src="images/icon-instagram.svg" alt="icon-instagram" class="ficon">
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
